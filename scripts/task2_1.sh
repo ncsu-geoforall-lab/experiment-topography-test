@@ -13,14 +13,14 @@ fi
 g.region n=221035 s=219876 w=323375 e=324801 res=3
 r.neighbors input=ned output=ned_tmp size=5
 r.colors map=ned_tmp rules=../elevation_color.txt
-r.contour input=ned_tmp output=contours_tmp step=20
+r.contour input=ned_tmp output=contours_tmp step=20 
 
 d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
 d.rast ned_tmp
 d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16
-X=323770
-Y=220736
+X=323979
+Y=220411
 OFFX=20
 OFFY=-20
 let "XX = X + OFFX"
@@ -31,8 +31,8 @@ d.graph -m << EOF
   move $XX $YY
   text A
 EOF
-X=323943
-Y=220328
+X=324347
+Y=220220
 let "XX = X + OFFX"
 let "YY = Y + OFFY"
 d.graph -m << EOF
