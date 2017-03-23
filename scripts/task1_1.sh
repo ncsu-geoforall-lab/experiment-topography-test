@@ -4,7 +4,6 @@ export GRASS_FONT="Lato-Medium"
 export GRASS_OVERWRITE=1
 
 ME=`basename -s .sh "$0"`
-echo $ME
 cd `dirname $0`
 if [ ! -d "../figures" ]; then
   mkdir ../figures
@@ -44,4 +43,9 @@ EOF
 
 d.mon stop=cairo
 
+echo "\mysection{Task ${ME: -1}}"
+echo "\myimage{${ME}.png}"
+echo "Imagine you had to walk to get from point A to point B, 
+and wanted to do so as easily as possible. Sketch the route you would build,
+and explain why you chose that particular path."
 
