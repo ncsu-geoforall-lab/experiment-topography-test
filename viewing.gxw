@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gxw SYSTEM "grass-gxw.dtd">
+<gxw>
+    <layer_manager dim="997,127,625,656">
+    </layer_manager>
+    <display name="Display 1" render="1" mode="8" showCompExtent="0" alignExtent="1" constrainRes="0" showStatusbar="1" showToolbars="1" dim="203,160,802,748" extent="320304.454215,213969.283282,322027.200700,215369.014800,0.000000,1.000000" tbres="1.000000" viewMode="2d" >
+    </display>
+</gxw>
