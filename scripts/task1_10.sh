@@ -74,7 +74,21 @@ d.graph -m << EOF
   text 1000
 EOF
 
-
+d.graph -m << EOF
+  color white
+  polygon
+307836.162353 206454.074118
+307828.468235 206501.777647
+307654.581176 206484.850588
+307680.741176 206427.914118
+EOF
+d.graph -m << EOF
+  color 139:105:20
+  size 2.7
+  move 307669 206435
+  rotation 10
+  text 1100
+EOF
 
 d.mon stop=cairo
 
