@@ -60,7 +60,7 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
+echo "\mysection{Task ${ME: -2}}"
 echo "\begin{center}"
 echo "\includegraphics[width=0.7\textwidth]{figures/${ME}_view.png}"
 #echo "\includegraphics[width=0.7\textwidth]{figures/${ME}.png}"
