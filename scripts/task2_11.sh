@@ -92,10 +92,11 @@ echo "\mysection{Task ${ME: -2}}"
 echo "\myimage{${ME}.png}"
 echo "Imagine there is a stream that connects the circle and the square.
 Please draw the path you believe the stream would follow.
-In addition, clearly mark the direction you believe the water flow, and why.
+In addition, clearly mark the direction you believe the water would flow, and why.
 
 \vspace{6em}
 
+\noindent
 Finally, do you think the water would flow faster near the circle,
 or near the square? Why?
 "

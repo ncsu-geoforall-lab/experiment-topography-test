@@ -21,26 +21,17 @@ d.vect contours_tmp color=139:105:20
 d.vect contours_tmp where="level % 50 = 0" width=3 color=139:105:20
 X=307747
 Y=205647
-OFFX=50
-OFFY=50
-let "XX = X + OFFX"
-let "YY = Y + OFFY"
 d.graph -m << EOF
   color black
   width 7
-  symbol basic/point 2 $X $Y none black
-  symbol basic/cross1 5 $XX $YY black none 
+  symbol basic/box 8 $X $Y black none 
 EOF
 X=307236
 Y=206590
-let "XX = X + OFFX"
-let "YY = Y + OFFY"
 d.graph -m << EOF
   color black
   width 7
-  symbol basic/point 2 $X $Y none black
-  symbol basic/circle 5 $XX $YY black none 
-  text B
+  symbol basic/circle 8 $X $Y black none
 EOF
 d.graph -m << EOF
   color white
@@ -94,6 +85,6 @@ d.mon stop=cairo
 
 echo "\mysection{Task ${ME: -2}}"
 echo "\myimage{${ME}.png}"
-echo "Imagine there is a stream that connects the circle and the cross.
+echo "Imagine there is a stream that connects the circle and the square.
 In which direction would the water flow? Why? Please draw the path the stream would take."
 
