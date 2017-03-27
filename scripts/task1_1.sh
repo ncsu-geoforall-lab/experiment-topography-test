@@ -20,7 +20,7 @@ d.rast ned_tmp
 d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16
 
-d.legend -tb raster=ned_tmp border_color=none at=2,47,87,92 range=630,1050
+d.legend -tb raster=ned_tmp border_color=none at=2,25,87,92 fontsize=14 labelnum=2 range=630,1050
 
 X=323770
 Y=220736
