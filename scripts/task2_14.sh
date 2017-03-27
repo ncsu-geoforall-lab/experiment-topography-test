@@ -10,7 +10,7 @@ if [ ! -d "../figures" ]; then
 fi
 
 
-g.region res=3 n=207393 s=205803 w=300105 e=302061
+g.region res=3 n=207331 s=205903 w=300105 e=302061
 r.neighbors input=ned output=ned_tmp size=7
 r.colors map=ned_tmp rules=../elevation_color.txt
 r.contour input=ned_tmp output=contours_tmp step=10
