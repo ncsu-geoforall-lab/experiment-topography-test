@@ -10,7 +10,7 @@ if [ ! -d "../figures" ]; then
 fi
 
 
-g.region res=10 n=622710 s=615430 w=-2335810 e=-2325810
+g.region res=10 n=623130 s=615000 w=-2335810 e=-2325810
 r.mapcalc "sedona_tmp = sedona"
 r.colors map=sedona_tmp rules=../elevation_color.txt
 r.contour input=sedona_tmp output=contours_tmp step=25
@@ -21,6 +21,7 @@ d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 200 = 0" width=3 color=95:72:16
 
 
+d.legend -tb raster=sedona_tmp border_color=none at=75,98,1,6 range=1320,2160  labelnum=2 fontsize=14
 
 d.graph -m << EOF
   color black
@@ -62,13 +63,16 @@ d.mon stop=cairo
 
 echo "\mysection{Task ${ME: -2}}"
 echo "\begin{center}"
-echo "\includegraphics[width=0.7\textwidth]{figures/${ME}_view.png}"
+echo "\includegraphics[width=0.65\textwidth]{figures/${ME}_view.png}"
 #echo "\includegraphics[width=0.7\textwidth]{figures/${ME}.png}"
 echo "\end{center}"
 
 echo "
 \noindent
 Imagine you see the view of the picture above. Circle the arrow on the map that indicates where and which direction you think you are facing.
+
+\vfill
+
 "
 
 echo "\myimage{${ME}.png}"

@@ -10,7 +10,7 @@ if [ ! -d "../figures" ]; then
 fi
 
 
-g.region res=10 n=621730 s=613120 w=-2333020 e=-2321200
+g.region res=10 n=621720 s=613080 w=-2332490 e=-2321850
 r.mapcalc "sedona_tmp = sedona"
 r.colors map=sedona_tmp rules=../elevation_color.txt
 r.contour input=sedona_tmp output=contours_tmp step=50
@@ -20,6 +20,7 @@ d.rast sedona_tmp
 d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 200 = 0" width=3 color=95:72:16
 
+d.legend -tb raster=sedona_tmp border_color=none at=2,25,87,92  range=1280,2160 labelnum=2 fontsize=14
 
 X=299936
 Y=239084
