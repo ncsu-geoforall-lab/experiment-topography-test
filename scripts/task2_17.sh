@@ -87,6 +87,23 @@ d.graph -m << EOF
   text 3200
 EOF
 
+
+d.graph -m << EOF
+  color white
+  polygon
+-2859677.975 1147665.86667
+-2859401.36667 1147815.95833
+-2859430.1 1147888.58333
+-2859726.39167 1147743.33333
+EOF
+d.graph -m << EOF
+  color 139:105:20
+  size 2.7
+  move -2859682.81667 1147668.80833
+  rotation 28
+  text 3100
+EOF
+
 d.mon stop=cairo
 
 echo "\mysection{Task ${ME: -2}}"
