@@ -20,6 +20,8 @@ d.rast ned_tmp
 d.vect contours_tmp color=139:105:20
 d.vect contours_tmp where="level % 100 = 0" width=3 color=139:105:20
 
+d.legend -tb raster=ned_tmp border_color=none at=2,25,87,92 fontsize=14 labelnum=2 range=800,1170
+
 # points and labels
 X1=298919
 Y1=206350
