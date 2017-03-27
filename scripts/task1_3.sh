@@ -19,6 +19,9 @@ d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
 d.rast ned_tmp
 d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16
+
+d.legend -tb raster=ned_tmp border_color=none at=53,98,1,6 range=1220,1930
+
 X=308963
 Y=226196
 OFFX=30
