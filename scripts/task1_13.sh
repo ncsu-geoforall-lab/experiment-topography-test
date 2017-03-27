@@ -15,7 +15,7 @@ r.neighbors input=ned output=ned_tmp size=5
 r.colors map=ned_tmp rules=../elevation_color.txt
 r.contour input=ned_tmp output=contours_tmp step=20
 
-d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
+d.mon cairo width=800 hei=584 res=1  out=../figures/${ME}.png --o
 #d.rast ned_tmp
 d.vect contours_tmp color=139:105:20
 d.vect contours_tmp where="level % 100 = 0" width=3 color=139:105:20
@@ -93,7 +93,7 @@ echo "Which elevation profile (below) matches the cross-section of the
 line AB above?
 
 \begin{center}
-\newcommand{\imgsize}{0.4}
+\newcommand{\imgsize}{0.47}
 \newcommand{\ABlabels}{
     \hspace*{2em}\textsf{\textbf{\small A \hfill B}}\hspace*{1em}
 }
