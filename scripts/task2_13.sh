@@ -21,8 +21,8 @@ d.vect contours_tmp color=139:105:20
 d.vect contours_tmp where="level % 100 = 0" width=3 color=139:105:20
 
 # points and labels
-X1=297046
-Y1=206348
+X1=297121
+Y1=206326
 X2=296650
 Y2=205703
 OFFX1=-100
