@@ -11,7 +11,21 @@ echo "\documentclass[12pt]{article}
 \newcommand{\mysection}[1]{\subsection*{#1}}
 \newcommand{\myimage}[1]{ \includegraphics[width=\textwidth]{figures/#1}}
 
-\begin{document}" > ../$OUT
+\begin{document}
+\pagestyle{empty}
+\begin{center}
+\Huge
+Topographic Map Assessment 1
+\end{center}
+\normalsize
+
+\noindent
+Please complete this 18-item assessment. The assessment is not timed. Try to answer each item to the best of your ability.
+
+\clearpage
+
+
+" > ../$OUT
 
 for TASK in "$@"
 do

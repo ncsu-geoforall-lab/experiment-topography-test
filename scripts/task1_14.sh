@@ -16,15 +16,15 @@ r.colors map=ned_tmp rules=../elevation_color.txt
 r.contour input=ned_tmp output=contours_tmp step=20
 
 d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
-#d.rast ned_tmp
+d.rast ned_tmp
 d.vect contours_tmp color=139:105:20
 d.vect contours_tmp where="level % 100 = 0" width=3 color=139:105:20
 
 # points and labels
 X1=298919
 Y1=206350
-X2=299124
-Y2=206032
+X2=299211
+Y2=206082
 OFFX1=-100
 OFFY1=-30
 OFFX2=20
@@ -45,39 +45,6 @@ d.graph -m << EOF
   text A
   move $XX2 $YY2
   text B
-EOF
-
-# contour labels
-d.graph -m << EOF
-  color white
-  polygon
-297880 205407
-297945 205370
-297980 205520
-297950 205545
-EOF
-d.graph -m << EOF
-  color 139:105:20
-  size 2.7
-  move 297933.081968 205394.639344
-  rotation 70
-  text 900
-EOF
-
-d.graph -m << EOF
-  color white
-  polygon
-297730 205607.278688
-297784.770492 205570
-297840 205750
-297800 205800
-EOF
-d.graph -m << EOF
-  color 139:105:20
-  size 2.7
-  move 297774.049181 205607.278688
-  rotation 70
-  text 1000
 EOF
 
 d.mon stop=cairo

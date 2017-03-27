@@ -75,7 +75,7 @@ EOF
 d.graph -m << EOF
   color 139:105:20
   size 2.7
-  move 297774.049181 205607.278688
+  move 297784.049181 205585.278688
   rotation 70
   text 1000
 EOF

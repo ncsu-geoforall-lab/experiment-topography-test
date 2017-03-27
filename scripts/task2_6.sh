@@ -10,49 +10,49 @@ if [ ! -d "../figures" ]; then
 fi
 
 
-g.region res=3 n=219234 s=217599 w=320337 e=322350
+g.region res=3 n=243135 s=241866 w=299769 e=301332
 r.neighbors input=ned output=ned_tmp size=7
 r.colors map=ned_tmp rules=../elevation_color.txt
-r.contour input=ned_tmp output=contours_tmp step=25
+r.contour input=ned_tmp output=contours_tmp step=10
 
 d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
 #d.rast ned_tmp
 d.vect contours_tmp color=95:72:16
-d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16
+d.vect contours_tmp where="level % 50 = 0" width=3 color=95:72:16
 
 
 d.graph -m << EOF
   color white
   polygon
-322092.156981 218200.278403
-322288.341233 218253.139455
-322260.624601 218295.827203
-322122.330286 218255.596129
+300492.064793 242421.468085
+300562.29342 242364.895025
+300593.506142 242405.861723
+300509.62195 242470.237964
 EOF
 d.graph -m << EOF
   color 95:72:16
   size 2.3
-  move 322120 218202
-  rotation 18
-  text 1000
+  move 300497.917179 242430.976037
+  rotation 325
+  text 950
 EOF
 
 
 d.graph -m << EOF
   color white
   polygon
-  321375.540983 218750.941222
-  321493.719761 218748.42678
-  321478.633109 218700.65238
-  321360.45433 218703.166823
+  300599.358528 242723.841338
+  300702.750673 242713.841338
+  300716.406239 242757.25088
+  300587.653757 242757.004856
 
 EOF
 d.graph -m << EOF
   color 95:72:16
   size 2.3
-  move 321373 218710 
+  move 300590.161709 242723.34929
   rotation 0
-  text 700
+  text 1050
 EOF
 
 d.graph -m << EOF
