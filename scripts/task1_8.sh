@@ -20,6 +20,7 @@ d.rast sedona_tmp
 d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 200 = 0" width=3 color=95:72:16
 
+d.legend -tb raster=sedona_tmp border_color=none at=2,25,87,92 range=1350,1940 labelnum=2 fontsize=14
 
 X=299936
 Y=239084
