@@ -21,15 +21,15 @@ d.vect contours_tmp color=139:105:20
 d.vect contours_tmp where="level % 100 = 0" width=3 color=139:105:20
 
 # points
-X=-2847673
-Y=1148294
+X=-2847446
+Y=1148266
 d.graph -m << EOF
   color black
   width 7
   symbol basic/box 8 $X $Y black none
 EOF
-X=-2848914
-Y=1150347
+X=-2849015
+Y=1150212
 d.graph -m << EOF
   color black
   width 7

@@ -42,9 +42,9 @@ EOF
 d.graph -m << EOF
   color black
   width 4
-  rotation 180
-  symbol geology/half-arrow_left 10 -2326038.55497 589595.274327 black black
-  symbol geology/half-arrow_right 10 -2326038.55497 589595.274327 black black
+  rotation 120
+  symbol geology/half-arrow_left 10 -2328557.90873 587437.713475 black black
+  symbol geology/half-arrow_right 10 -2328557.90873 587437.7134757 black black
 EOF
 d.graph -m << EOF
   color black
