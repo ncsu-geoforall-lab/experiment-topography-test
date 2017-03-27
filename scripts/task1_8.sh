@@ -10,12 +10,12 @@ if [ ! -d "../figures" ]; then
 fi
 
 
-g.region res=10 n=619310 s=615100 w=-2336720 e=-2331540
+g.region res=10 n=619070 s=615430 w=-2336800 e=-2331510
 r.mapcalc "sedona_tmp = sedona"
 r.colors map=sedona_tmp rules=../elevation_color.txt
 r.contour input=sedona_tmp output=contours_tmp step=50
 
-d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
+d.mon cairo width=800 hei=550 res=1  out=../figures/${ME}.png --o
 d.rast sedona_tmp
 d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 200 = 0" width=3 color=95:72:16
@@ -86,7 +86,7 @@ d.mon stop=cairo
 
 echo "\mysection{Task ${ME: -1}}"
 echo "\begin{center}"
-echo "\includegraphics[width=0.5\textwidth]{figures/${ME}.png}"
+echo "\includegraphics[width=0.65\textwidth]{figures/${ME}.png}"
 echo "\end{center}"
 
 echo "
