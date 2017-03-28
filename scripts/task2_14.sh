@@ -62,24 +62,41 @@ echo "Which elevation profile (below) matches the cross-section of the
 line AB above?
 
 \begin{center}
-\newcommand{\imgsize}{0.47}
+\newcommand{\imgsize}{0.45}
 \newcommand{\ABlabels}{
     \hspace*{2em}\textsf{\textbf{\small A \hfill B}}\hspace*{1em}
 }
-\begin{tabular}{cc}
+\newcommand{\answerLetter}[1]{
+    \raisebox{9ex}{#1)}
+}
+\setlength{\tabcolsep}{0.1em}
+\begin{tabular}{rcrc}
+\answerLetter{1}
+&
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_1.png}
+&
+\rule{0pt}{1em}  % to make this column further from the previous image
+\answerLetter{2}
 &
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_2.png}
 \\\\
+&
 \ABlabels
+&
 &
 \ABlabels
 \\\\
+\answerLetter{3}
+&
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_3.png}
+&
+\answerLetter{4}
 &
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_4.png}
 \\\\
+&
 \ABlabels
+&
 &
 \ABlabels
 \end{tabular}
