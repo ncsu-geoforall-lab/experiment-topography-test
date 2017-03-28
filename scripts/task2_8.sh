@@ -85,7 +85,6 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
 echo "\begin{center}"
 echo "\includegraphics[width=0.7\textwidth]{figures/${ME}.png}"
 echo "\end{center}"

@@ -17,8 +17,8 @@ r.contour input=ned_tmp output=contours_tmp step=10
 
 d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
 #d.rast ned_tmp
-d.vect contours_tmp color=139:105:20
-d.vect contours_tmp where="level % 50 = 0" width=3 color=139:105:20
+d.vect contours_tmp color=95:72:16
+d.vect contours_tmp where="level % 50 = 0" width=3 color=95:72:16
 X=317660
 Y=215239
 d.graph -m << EOF
@@ -43,7 +43,7 @@ d.graph -m << EOF
 318076.727666 215019.081921
 EOF
 d.graph -m << EOF
-  color 139:105:20
+  color 95:72:16
   size 2.7
   move 318070 215005
   rotation 320
@@ -59,7 +59,7 @@ d.graph -m << EOF
  317971.209444 214866.18817
 EOF
 d.graph -m << EOF
-  color 139:105:20
+  color 95:72:16
   size 2.7
   move 317963 214850
   rotation 320
@@ -70,8 +70,8 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
 echo "\myimage{${ME}.png}"
 echo "Imagine there is a stream that connects the circle and the square.
-In which direction would the water flow? Why? Please draw the path the stream would take."
+Please draw the path you believe the stream would follow. In addition,
+clearly mark the direction you believe the water would flow."
 

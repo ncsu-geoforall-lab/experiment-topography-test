@@ -17,8 +17,8 @@ r.contour input=ned_tmp output=contours_tmp step=20 cut=10
 
 d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
 #d.rast ned_tmp
-d.vect contours_tmp color=139:105:20
-d.vect contours_tmp where="level % 100 = 0" width=3 color=139:105:20
+d.vect contours_tmp color=95:72:16
+d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16
 
 # points
 X=-2847446
@@ -47,7 +47,7 @@ d.graph -m << EOF
 -2848820.29297 1148584.28183
 EOF
 d.graph -m << EOF
-  color 139:105:20
+  color 95:72:16
   size 2.7
   move -2848765.65407 1148540.89016 
   rotation 56
@@ -63,7 +63,7 @@ d.graph -m << EOF
 -2849161.86806 1148372.33456       
 EOF
 d.graph -m << EOF
-  color 139:105:20
+  color 95:72:16
   size 2.7
   move -2849184.0125 1148290.76788   
   rotation 330
@@ -79,7 +79,7 @@ d.graph -m << EOF
 -2847472.1981 1150311.80726
 EOF
 d.graph -m << EOF
-  color 139:105:20
+  color 95:72:16
   size 2.7
   move -2847551.30098 1150289.48781
   rotation 270
@@ -88,11 +88,9 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -2}}"
 echo "\myimage{${ME}.png}"
 echo "You are standing at the square, but you want to get to a place (on the map) where
 you would be able to see a small lake at the circle. Assume there is no vegetation.
 Please draw a line from the square to another place on the map that indicates
-the route you would take to a spot where you can see the circle. Explain below, why you chose
-the spot as well the route to get there.
+the most efficient route to a spot where you can see the circle.
 "

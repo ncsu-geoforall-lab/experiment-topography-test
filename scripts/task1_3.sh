@@ -67,7 +67,6 @@ d.graph -m << EOF
 EOF
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
 echo "\myimage{${ME}.png}"
 echo "The contour interval on this map is 20 meters. One person is standing at each point on the map. Please answer (Y/N)
  the following questions about whether the people standing at two points can see each other.
@@ -75,11 +74,11 @@ echo "The contour interval on this map is 20 meters. One person is standing at e
 
 echo ""
 echo "\begin{enumerate}"
-echo "\item A and B"
-echo "\item B and D"
-echo "\item A and C"
-echo "\item A and D"
-echo "\item B and C"
+echo "\item A and B \ ......"
+echo "\item B and D \ ......"
+echo "\item A and C \ ......"
+echo "\item A and D \ ......"
+echo "\item B and C \ ......"
 echo "\end{enumerate}"
 
 

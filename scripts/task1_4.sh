@@ -69,7 +69,6 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
 echo "\myimage{${ME}.png}"
 echo "The contour interval on this map is 10 meters. What is the elevation at point A?"
 

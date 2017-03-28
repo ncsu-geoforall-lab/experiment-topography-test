@@ -17,8 +17,8 @@ r.contour input=ned_tmp output=contours_tmp step=20
 
 d.mon cairo width=800 hei=584 res=1  out=../figures/${ME}.png --o
 d.rast ned_tmp
-d.vect contours_tmp color=139:105:20
-d.vect contours_tmp where="level % 100 = 0" width=3 color=139:105:20
+d.vect contours_tmp color=95:72:16
+d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16
 
 d.legend -tb raster=ned_tmp border_color=none at=2,25,87,92 fontsize=14 labelnum=2 range=800,1170
 
@@ -56,7 +56,6 @@ d.mon stop=cairo
 ./profile.py ned_tmp 298957.267759,206517.975409,298653.961749,206384.163934 ../figures/${ME}_profile_3.png
 ./profile.py ned_tmp 300245.426229,205998.786885,299783.330601,205952.398907 ../figures/${ME}_profile_4.png
 
-echo "\mysection{Task ${ME: -2}}"
 echo "\myimage{${ME}.png}"
 echo "Which elevation profile (below) matches the cross-section of the
 line AB above?

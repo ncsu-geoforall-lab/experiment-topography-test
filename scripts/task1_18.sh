@@ -21,37 +21,76 @@ d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 200 = 0" width=3 color=95:72:16
 
 
-
+X=301804
+Y=203710
+OFFX=50
+OFFY=-300
+let "XX = X + OFFX"
+let "YY = Y + OFFY"
 d.graph -m << EOF
   color black
   width 4
   rotation 90
-  symbol geology/half-arrow_left 10 301804.88895 203710.979819 black black
-  symbol geology/half-arrow_right 10 301804.88895 203710.979819 black black
+  symbol geology/half-arrow_left 10 $X $Y black black
+  symbol geology/half-arrow_right 10 $X $Y black black
+  move $XX $YY
+  rotation 0
+  size 3.5
+  text A
 EOF
 
-
+X=304097
+Y=208845
+OFFX=-700
+OFFY=100
+let "XX = X + OFFX"
+let "YY = Y + OFFY"
 d.graph -m << EOF
   color black
   width 4
   rotation 330
-  symbol geology/half-arrow_left 10 304097.649381 208845.948364 black black
-  symbol geology/half-arrow_right 10 304097.649381 208845.948364 black black
+  symbol geology/half-arrow_left 10 $X $Y black black
+  symbol geology/half-arrow_right 10 $X $Y black black
+  move $XX $YY
+  rotation 0
+  size 3.5
+  text C
 EOF
 
+X=303931
+Y=205516
+OFFX=0
+OFFY=-700
+let "XX = X + OFFX"
+let "YY = Y + OFFY"
 d.graph -m << EOF
   color black
   width 4
   rotation 100
-  symbol geology/half-arrow_left 10 303931.161674 205516.194224 black black
-  symbol geology/half-arrow_right 10 303931.161674 205516.194224 black black
+  symbol geology/half-arrow_left 10 $X $Y black black
+  symbol geology/half-arrow_right 10 $X $Y black black
+  move $XX $YY
+  rotation 0
+  size 3.5
+  text D
 EOF
+
+X=302740
+Y=209012
+OFFX=0
+OFFY=500
+let "XX = X + OFFX"
+let "YY = Y + OFFY"
 d.graph -m << EOF
   color black
   width 4
   rotation 250
-  symbol geology/half-arrow_left 10 302740.134232 209012.436071 black black
-  symbol geology/half-arrow_right 10 302740.134232 209012.436071 black black
+  symbol geology/half-arrow_left 10 $X $Y black black
+  symbol geology/half-arrow_right 10 $X $Y black black
+  move $XX $YY
+  rotation 0
+  size 3.5
+  text B
 EOF
 
 
@@ -92,7 +131,6 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -2}}"
 echo "\begin{center}"
 echo "\includegraphics[width=0.7\textwidth]{figures/${ME}_view.png}"
 #echo "\includegraphics[width=0.7\textwidth]{figures/${ME}.png}"
@@ -100,7 +138,8 @@ echo "\end{center}"
 
 echo "
 \noindent
-Imagine you see the view of the picture above. Circle the arrow on the map that indicates where and which direction you think you are facing.
+Imagine you see the view of the picture above.
+Write down the letter of the arrow that indicates where and which direction you think you are facing: ........
 "
 
 echo "\myimage{${ME}.png}"

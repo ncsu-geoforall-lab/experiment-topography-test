@@ -47,9 +47,7 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
 echo "\myimage{${ME}.png}"
-echo "Imagine you had to walk to get from point A to point B, 
-and wanted to do so as easily as possible. Sketch the route you would build,
-and explain why you chose that particular path."
+echo "Imagine you had to walk from point A to point B, 
+and wanted to do so as easily as possible. Sketch the route you would build."
 

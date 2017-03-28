@@ -72,8 +72,8 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
 echo "\myimage{${ME}.png}"
 echo "Imagine there is a stream that connects the circle and the square.
-In which direction would the water flow? Why? Please draw the path the stream would take."
+Please draw the path you believe the stream would follow. In addition,
+clearly mark the direction you believe the water would flow."
 

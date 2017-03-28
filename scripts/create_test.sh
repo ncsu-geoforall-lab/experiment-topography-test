@@ -15,12 +15,12 @@ echo "\documentclass[12pt]{article}
 %\pagestyle{empty}
 \begin{center}
 \Huge
-Topographic Map Assessment 2
+Topographic Map Assessment 1
 \end{center}
 \normalsize
 
 \noindent
-Please complete this 18-item assessment. Try to answer each item to the best of your ability.
+Please complete this assessment. Try to answer each item to the best of your ability.
 
 
 \vfill

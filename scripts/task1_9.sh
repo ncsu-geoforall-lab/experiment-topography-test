@@ -115,15 +115,14 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
 echo "\myimage{${ME}.png}"
 echo "Imagine Martin traveled on foot from point A to point B, and Megan traveled on foot from point C to point D.
 
-\noindent Who walked up a steeper slope? How can you tell?
+\noindent Who walked up a steeper slope?
 
 \vspace{6em}
 
-\noindent Who traveled a greater vertical distance? How can you tell?"
+\noindent Who traveled a greater vertical distance?"
 
 
 

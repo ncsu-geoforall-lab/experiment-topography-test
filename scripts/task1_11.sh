@@ -17,8 +17,8 @@ r.contour input=ned_tmp output=contours_tmp step=10
 
 d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
 #d.rast ned_tmp
-d.vect contours_tmp color=139:105:20
-d.vect contours_tmp where="level % 50 = 0" width=3 color=139:105:20
+d.vect contours_tmp color=95:72:16
+d.vect contours_tmp where="level % 50 = 0" width=3 color=95:72:16
 
 # points
 X=308336
@@ -47,7 +47,7 @@ d.graph -m << EOF
 308530 206460
 EOF
 d.graph -m << EOF
-  color 139:105:20
+  color 95:72:16
   size 2.7
   move 308350 206487
   rotation 335
@@ -63,7 +63,7 @@ d.graph -m << EOF
 308370 206657.07377
 EOF
 d.graph -m << EOF
-  color 139:105:20
+  color 95:72:16
   size 2.7
   move 308220 206565
   rotation 15
@@ -79,7 +79,7 @@ d.graph -m << EOF
 308135 206775
 EOF
 d.graph -m << EOF
-  color 139:105:20
+  color 95:72:16
   size 2.7
   move 307959.295082 206775
   rotation 340
@@ -88,15 +88,14 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -2}}"
 echo "\myimage{${ME}.png}"
 echo "Imagine there is a stream that connects the circle and the square.
 Please draw the path you believe the stream would follow.
-In addition, clearly mark the direction you believe the water flow, and why.
+In addition, clearly mark the direction you believe the water would flow.
 
 \vspace{6em}
 
 \noindent
 Finally, do you think the water would flow faster near the circle,
-or near the square? Why?
+or near the square?
 "

@@ -85,9 +85,8 @@ EOF
 
 d.mon stop=cairo
 
-echo "\mysection{Task ${ME: -1}}"
 echo "\begin{center}"
-echo "\includegraphics[width=0.65\textwidth]{figures/${ME}.png}"
+echo "\includegraphics[width=0.85\textwidth]{figures/${ME}.png}"
 echo "\end{center}"
 
 echo "
@@ -97,11 +96,11 @@ standing at the start of the arrow and facing in that direction?"
 
 echo "
 \begin{center}
-\begin{tabular}{ll}
-A & \includegraphics[width=0.55\textwidth]{figures/task1_8_wrong3.png}\\\\
-B & \includegraphics[width=0.55\textwidth]{figures/task1_8_wrong2.png}\\\\
-C & \includegraphics[width=0.55\textwidth]{figures/task1_8_wrong1.png}\\\\
-D & \includegraphics[width=0.55\textwidth]{figures/task1_8_correct.png}
+\begin{tabular}{llll}
+A & \includegraphics[width=0.45\textwidth]{figures/task1_8_wrong3.png} &
+B & \includegraphics[width=0.45\textwidth]{figures/task1_8_wrong2.png}\\\\
+C & \includegraphics[width=0.45\textwidth]{figures/task1_8_wrong1.png} &
+D & \includegraphics[width=0.45\textwidth]{figures/task1_8_correct.png}
 \end{tabular}
 \end{center}
 "
