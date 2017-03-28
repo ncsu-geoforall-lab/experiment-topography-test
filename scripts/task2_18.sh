@@ -11,9 +11,9 @@ fi
 
 
 g.region res=10 n=210804 s=203121 w=298605 e=309159
-#r.neighbors input=ned output=ned_tmp size=11
+r.neighbors input=ned output=ned_tmp size=11
 r.colors map=ned_tmp rules=../elevation_color.txt
-#r.contour input=ned_tmp output=contours_tmp step=25
+r.contour input=ned_tmp output=contours_tmp step=25
 
 d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
 d.rast sedona_tmp
