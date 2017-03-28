@@ -38,10 +38,14 @@ Date: ...........................
 
 " > ../$OUT
 
+COUNTER=1
+
 for TASK in "$@"
 do
+    echo "\mysection{Task $COUNTER}" >> ../$OUT
     ./$TASK >> ../$OUT
-    echo "\clearpage"
+    echo "\clearpage" >> ../$OUT
+    let "COUNTER += 1"
 done
 
 
