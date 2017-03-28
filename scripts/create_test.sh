@@ -12,15 +12,26 @@ echo "\documentclass[12pt]{article}
 \newcommand{\myimage}[1]{ \includegraphics[width=\textwidth]{figures/#1}}
 
 \begin{document}
-\pagestyle{empty}
+%\pagestyle{empty}
 \begin{center}
 \Huge
-Topographic Map Assessment 1
+Topographic Map Assessment 2
 \end{center}
 \normalsize
 
 \noindent
-Please complete this 18-item assessment. The assessment is not timed. Try to answer each item to the best of your ability.
+Please complete this 18-item assessment. Try to answer each item to the best of your ability.
+
+
+\vfill
+
+\noindent
+Participant ID: ...........................
+
+\vspace{2em}
+
+\noindent
+Date: ...........................
 
 \clearpage
 
