@@ -2,4 +2,4 @@
 ./scripts/create_test.sh task1_1.sh task1_2.sh task1_3.sh task1_4.sh task1_5.sh task1_6.sh task1_7.sh task1_13.sh task1_8.sh task1_9.sh task1_15.sh task1_11.sh  task1_14.sh  task1_16.sh task1_17.sh
 
 
-./scripts/create_test.sh task2_1.sh task2_2.sh task2_3.sh task2_4.sh task2_5.sh task2_6.sh task2_7.sh task2_13.sh task2_8.sh task2_9.sh task2_15.sh task2_11.sh  task2_14.sh  task2_16.sh task1_17.sh
+./scripts/create_test.sh task2_1.sh task2_2.sh task2_3.sh task2_4.sh task2_5.sh task2_6.sh task2_7.sh task2_13.sh task2_8.sh task2_9.sh task2_15.sh task2_11.sh  task2_14.sh  task2_16.sh task2_17.sh
