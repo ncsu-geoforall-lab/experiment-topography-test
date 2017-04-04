@@ -91,14 +91,14 @@ echo "\end{center}"
 
 echo "
 \noindent
-Which of the following views best represents what someone would see
+Base on the image above, which of the following views best represents what someone would see
 standing at the start of the arrow and facing in that direction?"
 
 echo "
 \begin{center}
 \begin{tabular}{rlrl}
-A & \includegraphics[width=0.45\textwidth]{figures/task2_8_wrong3.png} & B & \includegraphics[width=0.45\textwidth]{figures/task2_8_wrong2.png}\\\\
-C & \includegraphics[width=0.45\textwidth]{figures/task2_8_correct.png} & D & \includegraphics[width=0.45\textwidth]{figures/task2_8_wrong1.png}
+A) & \includegraphics[width=0.45\textwidth]{figures/task2_8_wrong3.png} & B) & \includegraphics[width=0.45\textwidth]{figures/task2_8_wrong2.png}\\\\
+C) & \includegraphics[width=0.45\textwidth]{figures/task2_8_correct.png} & D) & \includegraphics[width=0.45\textwidth]{figures/task2_8_wrong1.png}
 \end{tabular}
 \end{center}
 "

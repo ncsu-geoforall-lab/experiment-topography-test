@@ -68,9 +68,9 @@ EOF
 d.mon stop=cairo
 
 echo "\myimage{${ME}.png}"
-echo "The contour interval on this map is 20 meters. One person is standing at each point on the map. Please answer (Y/N)
+echo "The contour interval on this map is 20 meters. One person is standing at each point on the map. Please answer (Y/N) to
  the following questions about whether the people standing at two points can see each other.
- Assume they are able to use binoculars. Also assume there is no vegetation."
+ Assume they are able to use binoculars and there is no vegetation."
 
 echo ""
 echo "\begin{enumerate}"

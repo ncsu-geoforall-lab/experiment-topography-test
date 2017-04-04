@@ -72,4 +72,11 @@ d.mon stop=cairo
 echo "\myimage{${ME}.png}"
 echo "The contour interval on this map is 10 meters. What is the elevation at point A?"
 
+echo ""
+echo "\begin{description}"
+echo "\item A) 1064 m"
+echo "\item B) 1139 m"
+echo "\item C) 1183 m"
+echo "\item D) 1222 m"
+echo "\end{description}"
 

@@ -90,7 +90,7 @@ d.mon stop=cairo
 
 echo "\myimage{${ME}.png}"
 echo "You are standing at the square, but you want to get to a place (on the map) where
-you would be able to see a small lake at the circle. Assume there is no vegetation.
-Please draw a line from the square to another place on the map that indicates
-the most efficient route to a spot where you can see the circle.
+you would be able to see a small lake (the circle). Assume there is no vegetation.
+Please draw a line that indicates the most efficient route from the square to another spot
+on the map where you can see the lake.
 "

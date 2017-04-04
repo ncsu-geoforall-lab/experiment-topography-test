@@ -37,12 +37,14 @@ X1=304813
 Y1=208805
 X2=304884
 Y2=208644
-OFFX=20
-OFFY=-20
-let "XX1 = X1 + OFFX"
-let "YY1 = Y1 + OFFY"
-let "XX2 = X2 + OFFX"
-let "YY2 = Y2 + OFFY"
+OFFX1=-60
+OFFY1=30
+OFFX2=-40
+OFFY2=-120
+let "XX1 = X1 + OFFX1"
+let "YY1 = Y1 + OFFY1"
+let "XX2 = X2 + OFFX2"
+let "YY2 = Y2 + OFFY2"
 d.graph -m << EOF
   color black
   width 4
@@ -60,12 +62,14 @@ X1=303826
 Y1=208860
 X2=303546
 Y2=208802
-OFFX=0
-OFFY=-110
-let "XX1 = X1 + OFFX"
-let "YY1 = Y1 + OFFY"
-let "XX2 = X2 + OFFX"
-let "YY2 = Y2 + OFFY"
+OFFX1=20
+OFFY1=-20
+OFFX2=-140
+OFFY2=-40
+let "XX1 = X1 + OFFX1"
+let "YY1 = Y1 + OFFY1"
+let "XX2 = X2 + OFFX2"
+let "YY2 = Y2 + OFFY2"
 d.graph -m << EOF
   color black
   width 4

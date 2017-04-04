@@ -141,7 +141,8 @@ echo "\end{center}"
 echo "
 \noindent
 Imagine you see the view of the picture above.
-Write down the letter of the arrow that indicates where and which direction you think you are facing: ........
+Write down the letter of the arrow that indicates where you are standing
+and which direction you are facing: ........
 "
 
 echo "\myimage{${ME}.png}"

@@ -57,10 +57,16 @@ EOF
 d.mon stop=cairo
 
 echo "\myimage{${ME}.png}"
-echo "What is the contour interval on this map? That is, how much does elevation
-change moving from one line to another?"
+echo "What is the contour interval on this map?"
 
 
+echo ""
+echo "\begin{description}"
+echo "\item A) 5 m"
+echo "\item B) 10 m"
+echo "\item C) 20 m"
+echo "\item D) 25 m"
+echo "\end{description}"
 
 
 

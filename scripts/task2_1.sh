@@ -48,6 +48,6 @@ EOF
 d.mon stop=cairo
 
 echo "\myimage{${ME}.png}"
-echo "Imagine you had to walk from point A to point B, 
-and wanted to do so as easily as possible. Sketch the route you would build."
+echo "Imagine you had to walk from point A to point B.
+Draw the route you would take so that you expend the least amount of energy as possible."
 

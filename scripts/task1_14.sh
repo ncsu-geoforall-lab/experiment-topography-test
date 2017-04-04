@@ -57,8 +57,8 @@ d.mon stop=cairo
 ./profile.py ned_tmp 300245.426229,205998.786885,299783.330601,205952.398907 ../figures/${ME}_profile_4.png
 
 echo "\myimage{${ME}.png}"
-echo "Which elevation profile (below) matches the cross-section of the
-line AB above?
+echo "Based on the image above, which elevation profile (below) matches the cross-section of the
+line AB?
 
 \begin{center}
 \newcommand{\imgsize}{0.45}
@@ -70,12 +70,12 @@ line AB above?
 }
 \setlength{\tabcolsep}{0.1em}
 \begin{tabular}{rcrc}
-\answerLetter{1}
+\answerLetter{A}
 &
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_1.png}
 &
 \rule{0pt}{1em}  % to make this column further from the previous image
-\answerLetter{2}
+\answerLetter{B}
 &
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_2.png}
 \\\\
@@ -85,11 +85,11 @@ line AB above?
 &
 \ABlabels
 \\\\
-\answerLetter{3}
+\answerLetter{C}
 &
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_3.png}
 &
-\answerLetter{4}
+\answerLetter{D}
 &
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_4.png}
 \\\\

@@ -72,6 +72,6 @@ d.mon stop=cairo
 
 echo "\myimage{${ME}.png}"
 echo "Imagine there is a stream that connects the circle and the square.
-Please draw the path you believe the stream would follow. In addition,
-clearly mark the direction you believe the water would flow."
+Please draw the path the stream would follow and
+clearly mark the direction the water would flow with arrows."
 
