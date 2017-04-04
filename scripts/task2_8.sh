@@ -91,7 +91,7 @@ echo "\end{center}"
 
 echo "
 \noindent
-Base on the image above, which of the following views best represents what someone would see
+Based on the image above, which of the following views best represents what someone would see
 standing at the start of the arrow and facing in that direction?"
 
 echo "
