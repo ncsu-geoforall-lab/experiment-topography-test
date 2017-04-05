@@ -26,13 +26,12 @@ d.graph -m << EOF
   width 7
   symbol basic/box 8 $X $Y black none 
 EOF
-X=317727
-Y=214728
+X2=317727
+Y2=214728
 d.graph -m << EOF
   color black
   width 7
-  symbol basic/circle 8 $X $Y black none 
-  text B
+  symbol basic/circle 8 $X2 $Y2 black none 
 EOF
 d.graph -m << EOF
   color white
@@ -68,10 +67,22 @@ EOF
 
 
 
-d.mon stop=cairo
-
 echo "\myimage{${ME}.png}"
 echo "Imagine there is a stream that connects the circle and the square.
 Please draw the path the stream would follow and
 clearly mark the direction the water would flow with arrows."
 
+if [ -n "${KEY}" ]; then
+
+r.hydrodem input=ned_tmp out=ned_tmp2 -a
+g.region n=$Y s=$Y2
+g.region n=n+5 s=s-5
+r.drain input=ned_tmp2 output=drain drain=drain start_coordinates=$X,$Y
+v.generalize input=drain output=drain_gen method=snakes threshold=10
+g.region n=215324 s=214625 w=317343 e=318205 res=3
+
+d.vect map=drain_gen display=shape,dir color=30:144:255 width=4 size=25
+
+fi
+
+d.mon stop=cairo

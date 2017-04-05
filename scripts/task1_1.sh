@@ -34,20 +34,33 @@ d.graph -m << EOF
   move $XX $YY
   text A
 EOF
-X=323943
-Y=220328
-let "XX = X + OFFX"
-let "YY = Y + OFFY"
+X2=323943
+Y2=220328
+let "XX = X2 + OFFX"
+let "YY = Y2 + OFFY"
 d.graph -m << EOF
   color black
-  symbol basic/point 2 $X $Y none black
+  symbol basic/point 2 $X2 $Y2 none black
   move $XX $YY
   text B
 EOF
 
-d.mon stop=cairo
+
 
 echo "\myimage{${ME}.png}"
 echo "Imagine you had to walk from point A to point B.
 Draw the route you would take so that you expend the least amount of energy as possible."
 
+
+if [ -n "${KEY}" ]; then
+r.mapcalc "fr = 0"
+r.walk -k --overwrite elevation=ned_tmp@rendering friction=fr output=cost outdir=dir start_coordinates=$X,$Y stop_coordinates=$X2,$Y2 lambda=0 walk_coeff=0.72,15.5,0,-15.5
+r.drain -d input=cost direction=dir output=drain drain=drain start_coordinates=$X2,$Y2
+d.vect drain color=green width=4
+
+r.walk -k --overwrite elevation=ned_tmp@rendering friction=fr output=cost outdir=dir start_coordinates=$X,$Y stop_coordinates=$X2,$Y2 lambda=0 walk_coeff=0.72,2.5,0,-2
+r.drain -d input=cost direction=dir output=drain drain=drain start_coordinates=$X2,$Y2
+d.vect drain color=green width=4;
+fi
+
+d.mon stop=cairo

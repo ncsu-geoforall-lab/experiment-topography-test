@@ -28,12 +28,12 @@ d.graph -m << EOF
   width 7
   symbol basic/box 8 $X $Y black none
 EOF
-X=-2849015
-Y=1150212
+X2=-2849015
+Y2=1150212
 d.graph -m << EOF
   color black
   width 7
-  symbol basic/circle 6 $X $Y aqua none
+  symbol basic/circle 6 $X2 $Y2 aqua none
   text B
 EOF
 
@@ -86,11 +86,42 @@ d.graph -m << EOF
   text 3400
 EOF
 
-d.mon stop=cairo
+
 
 echo "\myimage{${ME}.png}"
 echo "You are standing at the square, but you want to get to a place (on the map) where
 you would be able to see a small lake (the circle). Assume there is no vegetation.
 Please draw a line that indicates the most efficient route from the square to another spot
 on the map where you can see the lake.
+
 "
+
+if [ -n "${KEY}" ]; then
+
+r.viewshed --overwrite obs=5 target=5 input=ned_tmp output=view coordinates=-2849015,1150212 -b
+r.mapcalc "view2 = if(view == 1, 1, null())"
+r.to.vect inp=view2 out=view -t type=area
+d.vect view f_color=yellow color=yellow width=3
+d.vect contours_tmp color=95:72:16
+d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16
+X2=-2849015
+Y2=1150212
+d.graph -m << EOF
+  color black
+  width 7
+  symbol basic/circle 6 $X2 $Y2 aqua none
+  text B
+EOF
+
+r.mapcalc "fr = 0"
+r.walk -k --overwrite elevation=ned_tmp friction=fr output=cost outdir=dir start_raster=view2 stop_coordinates=$X,$Y lambda=0 walk_coeff=0.2,10.5,0,-10.5
+r.drain -d input=cost direction=dir output=drain drain=drain start_coordinates=$X,$Y
+d.vect drain color=green width=4
+
+r.walk -k --overwrite elevation=ned_tmp friction=fr output=cost outdir=dir start_raster=view2 stop_coordinates=$X,$Y lambda=0 walk_coeff=0.6,2.5,0,-2.5
+r.drain -d input=cost direction=dir output=drain drain=drain start_coordinates=$X,$Y
+d.vect drain color=red width=4
+
+fi
+
+d.mon stop=cairo

@@ -28,12 +28,12 @@ d.graph -m << EOF
   width 7
   symbol basic/box 8 $X $Y black none
 EOF
-X=309258
-Y=206623
+X2=309258
+Y2=206623
 d.graph -m << EOF
   color black
   width 7
-  symbol basic/circle 8 $X $Y black none
+  symbol basic/circle 8 $X2 $Y2 black none
   text B
 EOF
 
@@ -86,7 +86,6 @@ d.graph -m << EOF
   text 1100
 EOF
 
-d.mon stop=cairo
 
 echo "\myimage{${ME}.png}"
 echo "Imagine there is a stream that connects the circle and the square.
@@ -99,3 +98,18 @@ clearly mark the direction the water would flow with arrows.
 Finally, would the water flow faster near the circle,
 or near the square?
 "
+
+if [ -n "${KEY}" ]; then
+
+r.hydrodem input=ned_tmp out=ned_tmp2 -a
+g.region n=$Y s=$Y2
+g.region n=n+5 s=s-5
+r.drain input=ned_tmp2 output=drain drain=drain start_coordinates=$X,$Y
+v.generalize input=drain output=drain_gen method=snakes threshold=10
+g.region res=3 n=207696 s=206265 w=307836 e=309798
+
+d.vect map=drain_gen display=shape,dir color=30:144:255 width=4 size=25
+
+fi
+
+d.mon stop=cairo
