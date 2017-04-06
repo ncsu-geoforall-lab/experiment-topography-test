@@ -15,7 +15,12 @@ r.neighbors input=ned output=ned_tmp size=5
 r.colors map=ned_tmp rules=../elevation_color.txt
 r.contour input=ned_tmp output=contours_tmp step=20
 
-d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
+if [ -n "${KEY}" ]; then
+d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}_key.png --o;
+else 
+d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o;
+fi
+
 d.rast ned_tmp
 d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16

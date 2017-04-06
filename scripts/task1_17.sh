@@ -15,7 +15,11 @@ r.neighbors input=yosemite output=ned_tmp size=3
 r.colors map=ned_tmp rules=../elevation_color.txt
 r.contour input=ned_tmp output=contours_tmp step=20 cut=10
 
-d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o
+if [ -n "${KEY}" ]; then
+d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}_key.png --o;
+else 
+d.mon cairo width=800 hei=650 res=1  out=../figures/${ME}.png --o;
+fi
 #d.rast ned_tmp
 d.vect contours_tmp color=95:72:16
 d.vect contours_tmp where="level % 100 = 0" width=3 color=95:72:16
@@ -118,9 +122,17 @@ r.walk -k --overwrite elevation=ned_tmp friction=fr output=cost outdir=dir start
 r.drain -d input=cost direction=dir output=drain drain=drain start_coordinates=$X,$Y
 d.vect drain color=green width=4
 
-r.walk -k --overwrite elevation=ned_tmp friction=fr output=cost outdir=dir start_raster=view2 stop_coordinates=$X,$Y lambda=0 walk_coeff=0.6,2.5,0,-2.5
+r.walk -k --overwrite elevation=ned_tmp friction=fr output=cost outdir=dir start_raster=view2 stop_coordinates=$X,$Y lambda=0 walk_coeff=0.6,3.5,0,-2.5
 r.drain -d input=cost direction=dir output=drain drain=drain start_coordinates=$X,$Y
-d.vect drain color=red width=4
+d.vect drain color=green width=4
+
+r.walk -k --overwrite elevation=ned_tmp friction=fr output=cost outdir=dir start_raster=view2 stop_coordinates=$X,$Y lambda=0 walk_coeff=0.5,20.5,0,-2.5
+r.drain -d input=cost direction=dir output=drain drain=drain start_coordinates=$X,$Y
+d.vect drain color=green width=4
+
+r.walk -k --overwrite elevation=ned_tmp friction=fr output=cost outdir=dir start_coordinates=-2848750,1149586 stop_coordinates=$X,$Y lambda=0 walk_coeff=0.6,3.5,0,-2.5
+r.drain -d input=cost direction=dir output=drain drain=drain start_coordinates=$X,$Y
+d.vect drain color=green width=4
 
 fi
 
