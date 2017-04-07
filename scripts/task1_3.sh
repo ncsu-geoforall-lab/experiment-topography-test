@@ -72,13 +72,17 @@ echo "The contour interval on this map is 20 meters. One person is standing at e
  the following questions about whether the people standing at two points can see each other.
  Assume they are able to use binoculars and there is no vegetation."
 
-echo ""
-echo "\begin{enumerate}"
-echo "\item A and B \ ......"
-echo "\item B and D \ ......"
-echo "\item A and C \ ......"
-echo "\item A and D \ ......"
-echo "\item B and C \ ......"
-echo "\end{enumerate}"
+echo "
+\vspace{1em}
+"
+echo "A and B: \hspace{1em} Y~/~N
+"
+echo "B and D: \hspace{1em} Y~/~N
+"
+echo "A and C: \hspace{1em} Y~/~N
+"
+echo "A and D: \hspace{1em} Y~/~N
+"
+echo "B and C: \hspace{1em} Y~/~N "
 
 

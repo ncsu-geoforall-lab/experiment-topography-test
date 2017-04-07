@@ -111,13 +111,13 @@ echo "
 \noindent
 Imagine you see the view of the picture above.
 Write down the letter of the arrow that indicates where you are standing
-and which direction you are facing: ........
+and which direction you are facing:
 
-\vfill
+\vspace{0.3em}
 
+\begin{center} A \hspace{2em} B  \hspace{2em} C  \hspace{2em} D \end{center}
 "
-
-echo "\myimage{${ME}.png}"
+echo "\includegraphics[width=0.9\textwidth]{figures/${ME}.png}"
 
 
 

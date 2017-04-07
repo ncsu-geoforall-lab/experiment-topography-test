@@ -123,7 +123,13 @@ echo "\myimage{${ME}.png}"
 echo "Imagine Joe traveled on foot from point A to point B, and Anna traveled on foot from point C to point D.
 Who walked up a steeper slope?"
 
+echo "
+\vspace{1em}
 
+A) Joe
+
+B) Anna
+"
 
 
 

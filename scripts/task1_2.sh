@@ -74,7 +74,7 @@ EOF
 echo "\myimage{${ME}.png}"
 echo "Imagine there is a stream that connects the circle and the square.
 Please draw the path the stream would follow and
-clearly mark the direction the water would flow with arrows."
+clearly mark the direction the water would flow with an arrow."
 
 if [ -n "${KEY}" ]; then
 

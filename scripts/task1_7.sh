@@ -102,7 +102,10 @@ d.mon stop=cairo
 echo "\myimage{${ME}.png}"
 echo "Which hill is higher: A or B?"
 
+echo "\vspace{1em}
 
+A \hspace{2em} B
+"
 
 
 

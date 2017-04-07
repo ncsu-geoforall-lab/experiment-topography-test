@@ -33,7 +33,6 @@ Participant ID: ...........................
 \noindent
 Date: ...........................
 
-\clearpage
 
 
 " > ../$OUT
@@ -42,7 +41,7 @@ COUNTER=1
 
 for TASK in "$@"
 do
-    echo "\mysection{Task $COUNTER}" >> ../$OUT
+    echo "\mysection{Question $COUNTER}" >> ../$OUT
     ./$TASK >> ../$OUT
     echo "\clearpage" >> ../$OUT
     let "COUNTER += 1"

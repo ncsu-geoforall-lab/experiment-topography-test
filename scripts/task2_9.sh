@@ -122,12 +122,28 @@ d.mon stop=cairo
 echo "\myimage{${ME}.png}"
 echo "Imagine Martin traveled on foot from point A to point B, and Megan traveled on foot from point C to point D.
 
+\vspace{1em}
+
 \noindent Who walked up a steeper slope?
 
-\vspace{6em}
+\vspace{1em}
 
-\noindent Who traveled a greater vertical distance?"
+A) Martin
 
+B) Megan
+
+\vspace{1em}
+
+\noindent Who traveled a greater vertical distance?
+
+\vspace{1em}
+
+A) Martin
+
+B) Megan
+
+C) Both traveled the same vertical distance
+"
 
 
 
