@@ -24,12 +24,15 @@ def profile(rasters, coordinates, filename, legend):
             profile_elev.append(float(line.split()[-1]))
         profiles[raster] = profile_elev
 
-    plt.figure(figsize=(8,3))
+    fig = plt.figure(figsize=(8,3))
     for raster in profiles:
         plt.plot(distance, profiles[raster], label=raster,
                  color="#22BB11", linewidth=4.0)
         if legend:
             plt.legend(loc=0)
+
+    plt.ylabel('elevation')
+    plt.xlabel('distance')
     plt.savefig(filename, bbox_inches='tight')
 
 

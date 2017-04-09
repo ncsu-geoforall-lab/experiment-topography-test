@@ -109,7 +109,7 @@ line AB?
 \answerLetter{B}
 &
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_2.png}
-\\\\
+\\\\[-3ex]
 &
 \ABlabels
 &
@@ -123,7 +123,7 @@ line AB?
 \answerLetter{D}
 &
 \includegraphics[width=\imgsize\textwidth]{figures/${ME}_profile_4.png}
-\\\\
+\\\\[-3ex]
 &
 \ABlabels
 &
